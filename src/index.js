@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+
 import "./index.css";
 const pizzaData = [
   {
@@ -154,7 +155,15 @@ function Order({ closeHour }) {
   return (
     <div className="order">
       <p>We'r open until {closeHour}:00. Come visit us or order online.</p>
-      <button className="btn">Order</button>
+      <button
+        title="Fast React Pizza co."
+        className="btn"
+        onClick={() =>
+          window.open("https://fast-react-pizza-sathya.netlify.app/", "_self")
+        }
+      >
+        Order
+      </button>
     </div>
   );
 }

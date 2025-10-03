@@ -74,7 +74,7 @@ function Menu() {
       {numPizzas > 0 ? (
         <>
           <p>
-            Authentic Italian cuisine, 6 creative dishes to choose from, All
+            Authentic Italian cuisine, many creative dishes to choose from, All
             from our stone oven,all organic, all delicious.
           </p>
           <ul className="pizzas">
@@ -112,7 +112,9 @@ function Pizza({ pizzaObj }) {
       <div>
         <h3>{pizzaObj.name}</h3>
         <p>{pizzaObj.ingredients}</p>
-        <span>{pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price}</span>
+        <span>
+          {pizzaObj.soldOut ? "SOLD OUT" : `₹ ${pizzaObj.price * 15}`}
+        </span>
       </div>
     </li>
   );
